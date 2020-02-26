@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
-const BOOSTRAP_COMPONENTS_ROOT = [
+const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
+  AlertModule.forRoot (),
 ];
 
-const BOOSTRAP_COMPONENTS = [
-  AccordionModule
+const BOOTSTRAP_COMPONENTS = [
+  AccordionModule,
+  AlertModule
 ];
 
 @NgModule({
- imports: [BOOSTRAP_COMPONENTS_ROOT],
- exports: [BOOSTRAP_COMPONENTS]
+ imports: [BOOTSTRAP_COMPONENTS_ROOT],
+ exports: [BOOTSTRAP_COMPONENTS]
 })
 export class SharedModule { }

@@ -1,0 +1,48 @@
+
+<!-- basic alerts -->
+<div class="mt-5">
+    <h3> Basic Alerts </h3>
+    <alert *ngFor="let alert of alerts;" [type]="alert.type">
+        <strong> {{ alert.title }} </strong> {{ alert.body }}
+    </alert>
+</div>
+
+<!-- link alerts -->
+<div class="mt-5">
+    <h3> Link Alerts </h3>
+    <alert *ngFor="let alert of alerts;" [type]="alert.type">
+        <strong> {{ alert.title }} </strong> {{ alert.body }}
+        <a href="#" class="alert-link"> Click Here. </a>
+    </alert>
+</div>
+
+<!-- dismissing alerts -->
+<div class="mt-5">
+    <h3> Dismissing Alerts </h3>
+    <button type="button" class="btn btn-primary mb-2" (click)="onReset ();"> Reset Alerts </button>
+    <alert *ngFor="let alert of dismissableAlerts;" [type]="alert.type" [dismissible]="dismissible" (onClose)="onCloseAlert (alert);">
+        <strong> {{ alert.title }} </strong> {{ alert.body }}
+    </alert>
+</div>
+
+<!-- dynamic content -->
+<div class="mt-5">
+    <h3> Dynamic Content </h3>
+    <alert type="success"> {{ messages[currentIndex] }}  </alert>
+    
+    <div *ngIf="currentIndex !== messages.length - 1; else resetBlock;">
+        <button type="button" class="btn btn-primary mb-2" (click)="onChangeText ();"> Change Text </button>
+    </div>
+
+    <ng-template #resetBlock>
+        <button type="button" class="btn btn-primary" (click)="currentIndex = 0;"> Reset </button>
+    </ng-template>
+</div>
+
+<!-- custom color -->
+<div class="mt-5">
+    <h3> Custom Color </h3>
+    <alert type="custom-color"> 
+        <strong> Alert </strong> with custom color...  
+    </alert>
+</div>
