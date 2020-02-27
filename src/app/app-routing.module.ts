@@ -18,6 +18,10 @@ const ROUTES: Routes = [
     path: 'datepicker',
     loadChildren: () => import('./datepicker/datepicker.module').then(mod => mod.DatepickerModule)
   },
+  {
+    path: 'modals',
+    loadChildren: () => import('./modals/modals.module').then(mod => mod.ModalsModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
