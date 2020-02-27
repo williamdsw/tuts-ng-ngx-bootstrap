@@ -10,6 +10,10 @@ const ROUTES: Routes = [
     path: 'alerts',
     loadChildren: () => import('./alerts/alerts.module').then(mod => mod.AlertsModule)
   },
+  {
+    path: 'carousel',
+    loadChildren: () => import('./carousel/carousel.module').then(mod => mod.CarouselModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
