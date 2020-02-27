@@ -1,0 +1,48 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Pagination </h2>
+    <pagination [totalItems]="30"></pagination>
+</div>
+
+<!-- boundary links -->
+<div class="mt-5 mb-5">
+    <h2> Pagination with Boundary Links </h2>
+    <pagination [totalItems]="53" [boundaryLinks]="true"></pagination>
+</div>
+
+<!-- custom links -->
+<div class="mt-5 mb-5">
+    <h2> Pagination with Custom Links </h2>
+    <pagination [totalItems]="145" 
+                [boundaryLinks]="true"
+                previousText="&lsaquo;"
+                nextText="&rsaquo;"
+                firstText="&laquo;"
+                lastText="&raquo;"></pagination>
+</div>
+
+<!-- disabled pagination -->
+<div class="mt-5 mb-5">
+    <h2> Disabled Pagination </h2>
+    <pagination [totalItems]="67" [disabled]="true"></pagination>
+</div>
+
+<!-- limits -->
+<div class="mt-5 mb-5">
+    <h2> Pagination Limits </h2>
+    <pagination [totalItems]="totalItems" [maxSize]="maxSize" [(ngModel)]="currentPage"></pagination>
+</div>
+
+<!-- content switching -->
+<div class="mt-5 mb-5">
+    <h2> Content Switching </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12">
+            <div class="content-wrapper">
+                <p class="content-item" *ngFor="let content of returnedArray;"> {{ content }}</p>
+            </div>
+            <pagination [totalItems]="contentArray.length" (pageChanged)="onPageChanged ($event);"></pagination>
+        </div>
+    </div>
+</div>

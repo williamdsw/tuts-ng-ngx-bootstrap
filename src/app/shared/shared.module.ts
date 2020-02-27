@@ -5,6 +5,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
@@ -12,6 +13,7 @@ const BOOTSTRAP_COMPONENTS_ROOT = [
   CarouselModule.forRoot(),
   BsDatepickerModule.forRoot(),
   ModalModule.forRoot(),
+  PaginationModule.forRoot(),
 ];
 
 const BOOTSTRAP_COMPONENTS = [
@@ -19,7 +21,8 @@ const BOOTSTRAP_COMPONENTS = [
   AlertModule,
   CarouselModule,
   BsDatepickerModule,
-  ModalModule
+  ModalModule,
+  PaginationModule,
 ];
 
 @NgModule({

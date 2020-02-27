@@ -22,6 +22,10 @@ const ROUTES: Routes = [
     path: 'modals',
     loadChildren: () => import('./modals/modals.module').then(mod => mod.ModalsModule)
   },
+  {
+    path: 'pagination',
+    loadChildren: () => import('./pagination-example/pagination-example.module').then(mod => mod.PaginationExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
