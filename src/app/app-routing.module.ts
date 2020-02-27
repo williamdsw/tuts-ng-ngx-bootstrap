@@ -14,6 +14,10 @@ const ROUTES: Routes = [
     path: 'carousel',
     loadChildren: () => import('./carousel/carousel.module').then(mod => mod.CarouselModule)
   },
+  {
+    path: 'datepicker',
+    loadChildren: () => import('./datepicker/datepicker.module').then(mod => mod.DatepickerModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 

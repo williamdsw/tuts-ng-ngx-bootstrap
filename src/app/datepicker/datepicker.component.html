@@ -1,0 +1,153 @@
+
+<!-- basic datepicker -->
+<div class="mt-5 mb-5">
+    <h2> Datepicker </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker>
+        </div>
+    </div>
+</div>
+
+<!-- basic datepicker range -->
+<div class="mt-5 mb-5">
+    <h2> Datepicker Range </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDaterangepicker>
+        </div>
+    </div>
+</div>
+
+<!-- inline datepicker -->
+<div class="mt-5 mb-5">
+    <h2> Inline Datepicker </h2>
+    <div class="row">
+        <div class="pr-3 pb-3">
+            <bs-datepicker-inline [bsValue]="bsInlineValue" ></bs-datepicker-inline>
+        </div>
+    </div>
+</div>
+
+<!-- inline datepicker range -->
+<div class="mt-5 mb-5">
+    <h2> Inline Datepicker Range </h2>
+    <div class="row">
+        <div class="pr-3 pb-3">
+            <bs-daterangepicker-inline [bsValue]="bsInlineRangeValue"></bs-daterangepicker-inline>
+        </div>
+    </div>
+</div>
+
+<!-- animated datepicker -->
+<div class="mt-5 mb-5">
+    <h2> Animated Datepicker </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigFirst">
+        </div>
+    </div>
+</div>
+
+<!-- adaptive position datepicker -->
+<div class="mt-5 mb-5">
+    <h2> Adaptive Position Datepicker </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigSecond">
+        </div>
+    </div>
+</div>
+
+<!-- initial state -->
+<div class="mt-5 mb-5">
+    <h2> Initial State Datepickers </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsValue]="bsInlineValue">
+        </div>
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDaterangepicker [(ngModel)]="bsInlineRangeValue">
+        </div>
+    </div>
+</div>
+
+<!-- custom date formats -->
+<div class="mt-5 mb-5">
+    <h2> Custom Date Formats </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigThird">
+        </div>
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigFourth">
+        </div>
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigFifth">
+        </div>
+    </div>
+</div>
+
+<!-- themes -->
+<div class="mt-5 mb-5">
+    <h2> Themes </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <select class="custom-select form-control" [(ngModel)]="colorTheme" (ngModelChange)="applyTheme (myDatepicker);">
+                <option *ngFor="let theme of themes;" [value]="theme"> {{ theme.replace ('theme-', '') }} </option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input #myDatepicker="bsDatepicker" type="text" class="form-control" placeholder="Datepicker" bsDatepicker [bsConfig]="bsConfigCustom">
+        </div>
+    </div>
+</div>
+
+<!-- locales -->
+<div class="mt-5 mb-5">
+    <h2> Locales </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <select class="custom-select form-control" [(ngModel)]="currentLocale" (ngModelChange)="applyLocale (datepickerLocale);">
+                <option *ngFor="let locale of locales;" [value]="locale"> {{ locale }} </option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input #datepickerLocale="bsDatepicker" type="text" class="form-control" placeholder="Datepicker" bsDatepicker>
+        </div>
+    </div>
+</div>
+
+<!-- min-max -->
+<div class="mt-5 mb-5">
+    <h2> Min-Max Dates </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [minDate]="minDate" [maxDate]="otherMaxDate">
+        </div>
+    </div>
+</div>
+
+<!-- days-disabled -->
+<div class="mt-5 mb-5">
+    <h2> Days disabled </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [daysDisabled]="daysDisabled">
+        </div>
+    </div>
+</div>
+
+<!-- dates-disabled -->
+<div class="mt-5 mb-5">
+    <h2> Dates disabled </h2>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker [datesDisabled]="datesDisabled">
+        </div>
+    </div>
+</div>
