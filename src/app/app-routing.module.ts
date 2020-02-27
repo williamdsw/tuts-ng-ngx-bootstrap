@@ -26,6 +26,10 @@ const ROUTES: Routes = [
     path: 'pagination',
     loadChildren: () => import('./pagination-example/pagination-example.module').then(mod => mod.PaginationExampleModule)
   },
+  {
+    path: 'popover',
+    loadChildren: () => import('./popover-example/popover-example.module').then(mod => mod.PopoverExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 

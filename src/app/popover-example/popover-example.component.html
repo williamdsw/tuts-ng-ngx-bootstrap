@@ -1,0 +1,43 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Popover </h2>
+    <button type="button" 
+            class="btn btn-primary"
+            popover="Example of popover..."> 
+        Click Me!
+    </button>
+</div>
+
+<!-- placement -->
+<div class="mt-5 mb-5">
+    <h2> Popover Placement </h2>
+    <button type="button" 
+            class="btn btn-default btn-secondary m-1"
+            *ngFor="let popover of popovers;"
+            [popover]="popover.content"
+            [popoverTitle]="popover.title"
+            [placement]="popover.placement"> 
+        {{ popover.title }}
+    </button>
+</div>
+
+<!-- custom triggers -->
+<div class="mt-5 mb-5">
+    <h2> Popover Custom Triggers </h2>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-info" popover="Hiding on blur..." triggers="mouseenter:mouseleave">
+                Hover over me!
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-info" popover="Double click to hide" triggers="dblclick">
+                Double click me!
+            </button>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Popover on change..." popover="Hiding on blur" triggers="keypress:focusout">
+        </div>
+    </div>
+</div>
