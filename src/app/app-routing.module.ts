@@ -30,6 +30,10 @@ const ROUTES: Routes = [
     path: 'popover',
     loadChildren: () => import('./popover-example/popover-example.module').then(mod => mod.PopoverExampleModule)
   },
+  {
+    path: 'progress-bar',
+    loadChildren: () => import('./progress-bar/progress-bar.module').then(mod => mod.ProgressBarModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 

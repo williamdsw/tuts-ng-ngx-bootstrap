@@ -7,6 +7,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
@@ -16,6 +17,7 @@ const BOOTSTRAP_COMPONENTS_ROOT = [
   ModalModule.forRoot(),
   PaginationModule.forRoot(),
   PopoverModule.forRoot(),
+  ProgressbarModule.forRoot(),
 ];
 
 const BOOTSTRAP_COMPONENTS = [
@@ -26,6 +28,7 @@ const BOOTSTRAP_COMPONENTS = [
   ModalModule,
   PaginationModule,
   PopoverModule,
+  ProgressbarModule,
 ];
 
 @NgModule({
