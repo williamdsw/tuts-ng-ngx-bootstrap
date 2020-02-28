@@ -1,0 +1,42 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Tooltip </h2>
+    <button type="button" 
+            class="btn btn-primary"
+            tooltip="Example of tooltip..."> 
+        Click Me!
+    </button>
+</div>
+
+<!-- placement -->
+<div class="mt-5 mb-5">
+    <h2> Tooltip Placement </h2>
+    <button type="button" 
+            class="btn btn-default btn-secondary m-1"
+            *ngFor="let tooltip of tooltips;"
+            [tooltip]="tooltip.content"
+            [placement]="tooltip.placement"> 
+        {{ tooltip.title }}
+    </button>
+</div>
+
+<!-- custom triggers -->
+<div class="mt-5 mb-5">
+    <h2> Tooltip Custom Triggers </h2>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-info" tooltip="Hiding on blur..." triggers="mouseenter:click">
+                Hover over me!
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-info" tooltip="Double click to hide" triggers="dblclick">
+                Double click me!
+            </button>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Tooltip on change..." tooltip="Hiding on blur" triggers="keypress:focusout">
+        </div>
+    </div>
+</div>

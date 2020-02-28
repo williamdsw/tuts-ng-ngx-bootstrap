@@ -46,6 +46,10 @@ const ROUTES: Routes = [
     path: 'tabs',
     loadChildren: () => import('./tabs-example/tabs-example.module').then(mod => mod.TabsExampleModule)
   },
+  {
+    path: 'tooltip',
+    loadChildren: () => import('./tooltip-example/tooltip-example.module').then(mod => mod.TooltipExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 

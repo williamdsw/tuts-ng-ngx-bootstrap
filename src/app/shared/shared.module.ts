@@ -11,6 +11,7 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { SortableModule } from 'ngx-bootstrap/sortable';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
@@ -24,6 +25,7 @@ const BOOTSTRAP_COMPONENTS_ROOT = [
   RatingModule.forRoot(),
   SortableModule.forRoot(),
   TabsModule.forRoot(),
+  TooltipModule.forRoot(),
 ];
 
 const BOOTSTRAP_COMPONENTS = [
@@ -38,6 +40,7 @@ const BOOTSTRAP_COMPONENTS = [
   RatingModule,
   SortableModule,
   TabsModule,
+  TooltipModule,
 ];
 
 @NgModule({
