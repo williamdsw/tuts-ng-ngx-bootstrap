@@ -9,6 +9,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { RatingModule } from 'ngx-bootstrap/rating';
+import { SortableModule } from 'ngx-bootstrap/sortable';
 
 const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
@@ -20,6 +21,7 @@ const BOOTSTRAP_COMPONENTS_ROOT = [
   PopoverModule.forRoot(),
   ProgressbarModule.forRoot(),
   RatingModule.forRoot(),
+  SortableModule.forRoot(),
 ];
 
 const BOOTSTRAP_COMPONENTS = [
@@ -31,7 +33,8 @@ const BOOTSTRAP_COMPONENTS = [
   PaginationModule,
   PopoverModule,
   ProgressbarModule,
-  RatingModule
+  RatingModule,
+  SortableModule,
 ];
 
 @NgModule({

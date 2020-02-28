@@ -1,0 +1,72 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Sortables </h2>
+    <div class="row">
+
+        <!-- hard rock bands -->
+        <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+            <bs-sortable 
+                [(ngModel)]="hardRockBands"
+                itemClass="sortable-item"
+                itemActiveClass="sortable-item-active"
+                placeholderItem="Drag here"
+                placeholderClass="placeholderStyle"
+                wrapperClass="sortable-wrapper">
+            </bs-sortable>
+            <span class="code-preview">
+                model: {{ hardRockBands | json }}
+            </span>
+        </div>
+
+        <!-- heavy metal bands -->
+        <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+            <bs-sortable 
+                [(ngModel)]="heavyMetalBands"
+                itemClass="sortable-item"
+                itemActiveClass="sortable-item-active"
+                placeholderItem="Drag here"
+                placeholderClass="placeholderStyle"
+                wrapperClass="sortable-wrapper">
+            </bs-sortable>
+            <span class="code-preview">
+                model: {{ heavyMetalBands | json }}
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- complex data model -->
+<div class="mt-5 mb-5">
+    <h2> Complex Data Model </h2>
+    <div class="row">
+
+        <!-- rock bands -->
+        <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+            <bs-sortable 
+                [(ngModel)]="rockBands"
+                fieldName="name"
+                itemClass="sortable-item"
+                itemActiveClass="sortable-item-active"
+                placeholderItem="Drag here"
+                placeholderClass="placeholderStyle"
+                wrapperClass="sortable-wrapper">
+            </bs-sortable>
+            <span class="code-preview">{{ rockBands | json }}</span>
+        </div>
+
+        <!-- new wave bands -->
+        <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+            <bs-sortable 
+                [(ngModel)]="newWaveBands"
+                fieldName="name"
+                itemClass="sortable-item"
+                itemActiveClass="sortable-item-active"
+                placeholderItem="Drag here"
+                placeholderClass="placeholderStyle"
+                wrapperClass="sortable-wrapper">
+            </bs-sortable>
+            <span class="code-preview">{{ newWaveBands | json }}</span>
+        </div>
+    </div>
+</div>

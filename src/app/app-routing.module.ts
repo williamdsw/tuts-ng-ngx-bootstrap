@@ -38,6 +38,10 @@ const ROUTES: Routes = [
     path: 'rating',
     loadChildren: () => import('./rating-example/rating-example.module').then(mod => mod.RatingExampleModule)
   },
+  {
+    path: 'sortable',
+    loadChildren: () => import('./sortable-example/sortable-example.module').then(mod => mod.SortableExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
