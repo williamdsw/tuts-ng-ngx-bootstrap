@@ -34,6 +34,10 @@ const ROUTES: Routes = [
     path: 'progress-bar',
     loadChildren: () => import('./progress-bar/progress-bar.module').then(mod => mod.ProgressBarModule)
   },
+  {
+    path: 'rating',
+    loadChildren: () => import('./rating-example/rating-example.module').then(mod => mod.RatingExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 

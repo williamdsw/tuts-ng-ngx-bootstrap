@@ -1,0 +1,56 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Rating </h2>
+    <rating [max]="max" [readonly]="isReadonly" [(ngModel)]="currentRate"></rating>
+    <div class="card">
+        <pre class="card-block card-header"> Rate: <b>{{ currentRate }}</b></pre>
+    </div>
+</div>
+
+<!-- dynamic -->
+<div class="mt-5 mb-5">
+    <h2> Dynamic Rating </h2>
+    <rating [max]="max" [(ngModel)]="otherCurrentRate" 
+            (onHover)="onHoveringOver ($event);"
+            (onLeave)="onResetStar ();">
+    </rating>
+    <span class="label" [ngClass]="labelClass" [ngStyle]="labelStyle">
+        {{ percent }} %
+    </span>
+    <div class="card">
+        <pre class="card-block card-header"> Rate: <b>{{ otherCurrentRate }}</b>; Hovering over: <b>{{ overStar || "none"}}</b></pre>
+    </div>
+</div>
+
+<!-- custom 1 -->
+<div class="mt-5 mb-5">
+    <h2> Custom Rating 1 </h2>
+
+    <rating [max]="10" [(ngModel)]="customRateFirst" [customTemplate]="customRateTemplateFirst"></rating>
+
+    <div class="card">
+        <pre class="card-block card-header"> Rate: <b>{{ customRateFirst }}</b></pre>
+    </div>
+
+    <ng-template #customRateTemplateFirst let-index="index" let-value="value">
+        {{ index < value ? '&#9745;' : '&#9744;' }}
+    </ng-template>
+</div>
+
+<!-- custom 2 -->
+<div class="mt-5 mb-5">
+    <h2> Custom Rating 2 </h2>
+
+    <rating [max]="10" [(ngModel)]="customRateSecond" [customTemplate]="customRateTemplateSecond"></rating>
+
+    <div class="card">
+        <pre class="card-block card-header"> Rate: <b>{{ customRateSecond }}</b></pre>
+    </div>
+
+    <ng-template #customRateTemplateSecond let-index="index" let-value="value">
+        <button type="button" class="btn btn-{{ index < value ? 'warning' : 'default' }}">
+            {{ index < value ? '&#9733;' : '&#9734;' }}
+        </button>
+    </ng-template>
+</div>
