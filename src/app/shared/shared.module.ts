@@ -12,6 +12,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { SortableModule } from 'ngx-bootstrap/sortable';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 const BOOTSTRAP_COMPONENTS_ROOT = [
   AccordionModule.forRoot (),
@@ -26,6 +27,7 @@ const BOOTSTRAP_COMPONENTS_ROOT = [
   SortableModule.forRoot(),
   TabsModule.forRoot(),
   TooltipModule.forRoot(),
+  TypeaheadModule.forRoot(),
 ];
 
 const BOOTSTRAP_COMPONENTS = [
@@ -41,6 +43,7 @@ const BOOTSTRAP_COMPONENTS = [
   SortableModule,
   TabsModule,
   TooltipModule,
+  TypeaheadModule,
 ];
 
 @NgModule({

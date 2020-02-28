@@ -1,0 +1,68 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Array </h2>
+    <input type="text" class="form-control" placeholder="Type a band..." 
+           [typeahead]="bands" [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+</div>
+
+<!-- animation -->
+<div class="mt-5 mb-5">
+    <h2> With Animation </h2>
+    <input type="text" class="form-control" placeholder="Type a band..." 
+           [typeahead]="bands" [isAnimated]="true" [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+</div>
+
+<!-- adaptive position -->
+<div class="mt-5 mb-5">
+    <h2> Adaptive Position </h2>
+    <input type="text" class="form-control" placeholder="Type a band..." 
+           [typeahead]="bands" [adaptivePosition]="true"
+           [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+</div>
+
+<!-- item template -->
+<div class="mt-5 mb-5">
+    <h2> Item template </h2>
+    <input type="text" class="form-control" placeholder="Type a band..." 
+           [typeahead]="bands" [typeaheadItemTemplate]="customItemTemplate"
+           [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+
+    <ng-template #customItemTemplate let-model="item" let-index="index">
+        <h5> This is {{ model | json}} Index: {{ index }} </h5>
+    </ng-template>
+</div>
+
+<!-- grouping results -->
+<div class="mt-5 mb-5">
+    <h2> Grouping Results </h2>
+    <input type="text" class="form-control"
+           [typeahead]="otherBands" [adaptivePosition]="true"
+           typeaheadOptionField="name" typeaheadGroupField="genre"
+           [(ngModel)]="currentOtherBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentOtherBand | json }}</pre>
+</div>
+
+<!-- scrollable -->
+<div class="mt-5 mb-5">
+    <h2> Scrollable </h2>
+    <input type="text" class="form-control"
+           [typeahead]="bands" [adaptivePosition]="true"
+           [typeaheadScrollable]="true" [typeaheadOptionsInScrollableView]="5"
+           [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+</div>
+
+<!-- min-length -->
+<div class="mt-5 mb-5">
+    <h2> Min Length </h2>
+    <input type="text" class="form-control"
+           [typeahead]="bands" [adaptivePosition]="true"
+           [typeaheadMinLength]="2"
+           [(ngModel)]="currentBand">
+    <pre class="card card-block card-header mb-3"> Model: {{ currentBand | json }}</pre>
+</div>

@@ -50,6 +50,10 @@ const ROUTES: Routes = [
     path: 'tooltip',
     loadChildren: () => import('./tooltip-example/tooltip-example.module').then(mod => mod.TooltipExampleModule)
   },
+  {
+    path: 'typeahead',
+    loadChildren: () => import('./typeahead-example/typeahead-example.module').then(mod => mod.TypeaheadExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
