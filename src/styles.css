@@ -36,3 +36,15 @@
     margin: 0 0 10px;
     overflow: auto;
 }
+
+.red-tab { background-color: darkred; color: white; }
+.red-tab a { background-color: red !important; }
+.red-tab a span { color: white; font-weight: bold; }
+
+.green-tab { background-color: darkgreen; color: white; }
+.green-tab a { background-color: green !important; }
+.green-tab a span { color: white; font-weight: bold; }
+
+.blue-tab { background-color: darkblue; color: white; }
+.blue-tab a { background-color: blue !important; }
+.blue-tab a span { color: white; font-weight: bold; }

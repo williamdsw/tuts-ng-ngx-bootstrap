@@ -1,0 +1,51 @@
+
+<!-- basic -->
+<div class="mt-5 mb-5">
+    <h2> Basic Tabs </h2>
+    <div>
+        <tabset>
+            <tab heading="Hard Rock"> KISS </tab>
+            <tab heading="Heavy Metal"> Iron Maiden </tab>
+            <tab heading="Industrial"> Ministry </tab>
+        </tabset>
+    </div>
+</div>
+
+<!-- disabled -->
+<div class="mt-5 mb-5">
+    <h2> Disable Tabs </h2>
+    <button type="button" class="btn btn-primary btn-sm" (click)="onToggleTabs ();">
+        Enable / Disable
+    </button>
+    <div class="mt-1">
+        <tabset #toggleTabs>
+            <tab heading="Hard Rock"> KISS </tab>
+            <tab heading="Heavy Metal"> Iron Maiden </tab>
+            <tab heading="Industrial"> Ministry </tab>
+        </tabset>
+    </div>
+</div>
+
+<!-- justified -->
+<div class="mt-5 mb-5">
+    <h2> Justified Tabs </h2>
+    <div>
+        <tabset [justified]="true">
+            <tab heading="Hard Rock"> KISS </tab>
+            <tab heading="Heavy Metal"> Iron Maiden </tab>
+            <tab heading="Industrial"> Ministry </tab>
+        </tabset>
+    </div>
+</div>
+
+<!-- dynamic -->
+<div class="mt-5 mb-5">
+    <h2> Dynamic Tabs </h2>
+    <div>
+        <tabset>
+            <tab *ngFor="let tab of tabs;" [heading]="tab.title" [customClass]="tab.customClass">
+                {{ tab.content }}
+            </tab>
+        </tabset>
+    </div>
+</div>

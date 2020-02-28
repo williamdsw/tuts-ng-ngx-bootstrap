@@ -42,6 +42,10 @@ const ROUTES: Routes = [
     path: 'sortable',
     loadChildren: () => import('./sortable-example/sortable-example.module').then(mod => mod.SortableExampleModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs-example/tabs-example.module').then(mod => mod.TabsExampleModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'accordion' }
 ];
 
