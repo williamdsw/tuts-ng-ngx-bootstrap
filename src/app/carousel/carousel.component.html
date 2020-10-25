@@ -1,34 +1,51 @@
+<article>
 
-<!-- basic -->
-<div class="mt-5 mb-5">
-    <h2> Basic Carousel </h2>
-    <carousel>
-        <slide *ngFor="let slide of slides;">
-            <img [src]="slide.src" [alt]="slide.alt">
-        </slide>
-    </carousel>
-</div>
+    <!-- basic -->
+    <section>
+        <div class="mt-5 mb-5">
+            <header>
+                <h2> Basic Carousel </h2>
+            </header>
+            
+            <carousel>
+                <slide *ngFor="let slide of slides;">
+                    <img [src]="slide.src" [alt]="slide.alt">
+                </slide>
+            </carousel>
+        </div>
+    </section>
 
-<!-- optional captions -->
-<div class="mt-5 mb-5">
-    <h2> Carousel with Optional Captions </h2>
-    <carousel>
-        <slide *ngFor="let slide of slides;">
-            <img [src]="slide.src" [alt]="slide.alt">
-            <div class="carousel-caption d-none d-md-block">
-                <h3> {{ slide.header }} </h3>
-                <p> {{ slide.body }} </p>
-            </div>
-        </slide>
-    </carousel>
-</div>
+    <!-- optional captions -->
+    <section>
+        <div class="mt-5 mb-5">
+            <header>
+                <h2> Carousel with Optional Captions </h2>
+            </header>
+            
+            <carousel>
+                <slide *ngFor="let slide of slides;">
+                    <img [src]="slide.src" [alt]="slide.alt">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3> {{ slide.header }} </h3>
+                        <p> {{ slide.body }} </p>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </section>
 
-<!-- interval -->
-<div class="mt-5 mb-5">
-    <h2> Carousel with Interval of 2000 ms </h2>
-    <carousel [interval]="slideInterval">
-        <slide *ngFor="let slide of slides;">
-            <img [src]="slide.src" [alt]="slide.alt">
-        </slide>
-    </carousel>
-</div>
+    <!-- interval -->
+    <section>
+        <div class="mt-5 mb-5">
+            <header>
+                <h2> Carousel with Interval of 2000 ms </h2>
+            </header>
+            
+            <carousel [interval]="slideInterval">
+                <slide *ngFor="let slide of slides;">
+                    <img [src]="slide.src" [alt]="slide.alt">
+                </slide>
+            </carousel>
+        </div>
+    </section>
+</article>
