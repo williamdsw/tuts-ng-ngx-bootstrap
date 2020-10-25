@@ -5,7 +5,7 @@ import { RatingExampleComponent } from './rating-example.component';
 
 const ROUTES: Routes = [
   { path: '', component: RatingExampleComponent },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(ROUTES)],

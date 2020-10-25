@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rating-example',
-  templateUrl: './rating-example.component.html',
-  styleUrls: ['./rating-example.component.css']
+  templateUrl: './rating-example.component.html'
 })
 export class RatingExampleComponent implements OnInit {
 
   // FIELDS
 
-  public max: number = 10;
-  public currentRate: number = 7;
-  public isReadonly: boolean = true;
+  public max = 10;
+  public currentRate = 7;
+  public isReadonly = true;
 
-  public otherCurrentRate: number = 5;
+  public otherCurrentRate = 5;
   public overStar: number | undefined;
-  public percent: number;
+  public percent = 0;
   public labelClass = {
     'label-warning': this.percent < 30,
     'label-info': this.percent >= 30 && this.percent < 70,
@@ -25,8 +24,8 @@ export class RatingExampleComponent implements OnInit {
     display: 'inline'
   };
 
-  public customRateFirst: number = 4;
-  public customRateSecond: number = 8;
+  public customRateFirst = 4;
+  public customRateSecond = 8;
 
   // CONSTRUCTOR
 
@@ -36,8 +35,7 @@ export class RatingExampleComponent implements OnInit {
 
   // LIFECYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // HELPER FUNCTIONS
 
