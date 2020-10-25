@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-alerts',
   templateUrl: './alerts.component.html',
-  styleUrls: ['./alerts.component.css']
+  styles: []
 })
 export class AlertsComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class AlertsComponent implements OnInit {
     { type: 'danger', title: 'Oh snap!', body: 'Danger alert message.' },
   ];
 
-  dismissible: boolean = true;
+  dismissible = true;
 
   messages: string[] = [
     'Lorem ipsum dolor sit amet.',
@@ -31,7 +31,7 @@ export class AlertsComponent implements OnInit {
     'Ipsum quia dolor sit amet, consectetur, adipisci velit...'
   ];
 
-  currentIndex: number = 0;
+  currentIndex = 0;
 
   // CONSTRUCTOR
 
@@ -39,8 +39,7 @@ export class AlertsComponent implements OnInit {
 
   // LIFE CYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // HELPER FUNCTIONS
 
