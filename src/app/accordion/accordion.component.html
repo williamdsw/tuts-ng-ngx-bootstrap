@@ -1,96 +1,119 @@
+<article>
 
-<!-- basic -->
-<div class="mt-5">
-    <h3> Basic Header </h3>
-    <accordion>
-        <accordion-group *ngFor="let header of headers; let i = index;" [heading]="header">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- basic -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Basic Header</h3>
+            </header>
+            <accordion>
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
 
-<!-- animated -->
-<div class="mt-5">
-    <h3> Animated Header </h3>
-    <accordion [isAnimated]="true">
-        <accordion-group *ngFor="let header of headers; let i = index;" [heading]="header">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- animated -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Animated Header</h3>
+            </header>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
 
-<!-- open change event -->
-<div class="mt-5">
-    <h3> Event header </h3>
-    <accordion [isAnimated]="true">
-        <accordion-group 
-            *ngFor="let header of headers; let i = index;" [heading]="header"
-            (isOpenChange)="onHeaderIsOpenChange ((i + 1));">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-    </accordion>
+    <!-- open change event -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Event header</h3>
+            </header>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header"
+                    (isOpenChange)="onHeaderIsOpenChange(i + 1)">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+            </accordion>
 
-    <p *ngIf="headerChanged">
-        {{ headerChanged }}
-    </p>
-</div>
+            <p *ngIf="headerChanged">
+                {{ headerChanged }}
+            </p>
+        </div>
+    </section>
 
-<!-- enable / disable -->
-<div class="mt-5">
-    <h3> Enable / Disable </h3>
-    <p>
-        <button type="button" 
-                class="btn btn-primary btn-sm"
-                (click)="isDisabled = !isDisabled">
-            Enable / Disable
-        </button>
-    </p>
-    <accordion [isAnimated]="true">
-        <accordion-group 
-            *ngFor="let header of headers; let i = index;" [heading]="header"
-            [isDisabled]="isDisabled">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- enable / disable -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Enable / Disable</h3>
+            </header>
+            <p>
+                <button type="button" class="btn btn-primary btn-sm" (click)="isDisabled = !isDisabled">
+                    Enable / Disable
+                </button>
+            </p>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header"
+                    [isDisabled]="isDisabled">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
 
-<!-- default opened -->
-<div class="mt-5">
-    <h3> Default opened </h3>
-    <accordion [isAnimated]="true">
-        <accordion-group 
-            *ngFor="let header of headers; let i = index;" [heading]="header">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-        <accordion-group heading="Default..." [isOpen]="true">
-            Opened by default...
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- default opened -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Default opened</h3>
+            </header>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+                <accordion-group heading="Default..." [isOpen]="true">
+                    Opened by default...
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
 
-<!-- dynamic group -->
-<div class="mt-5">
-    <h3> Dynamic Group </h3>
-    <p>
-        <button type="button" class="btn btn-primary btn-sm" (click)="addGroupItem ();">
-            Add Group Item
-        </button>
-    </p>
-    <accordion [isAnimated]="true">
-        <accordion-group 
-            *ngFor="let item of accordionGroup;" [heading]="item.header">
-            <p> {{ item?.content }}</p>
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- dynamic group -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Dynamic Group</h3>
+            </header>
+            <p>
+                <button type="button" class="btn btn-primary btn-sm" (click)="addGroupItem()">
+                    Add Group Item
+                </button>
+            </p>
+            <accordion [isAnimated]="true">
+                <accordion-group *ngFor="let item of accordionGroup" [heading]="item.header">
+                    <p>{{ item?.content }}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
 
-<!-- open only one -->
-<div class="mt-5">
-    <h3> Open Only One </h3>
-    <accordion [isAnimated]="true" [closeOthers]="true">
-        <accordion-group 
-            *ngFor="let header of headers; let i = index;" [heading]="header">
-            <p> {{ contents[i] }}</p>
-        </accordion-group>
-    </accordion>
-</div>
+    <!-- open only one -->
+    <section>
+        <div class="mt-5">
+            <header>
+                <h3>Open Only One</h3>
+            </header>
+            <accordion [isAnimated]="true" [closeOthers]="true">
+                <accordion-group *ngFor="let header of headers; let i = index" [heading]="header">
+                    <p>{{ contents[i] }}</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </section>
+</article>

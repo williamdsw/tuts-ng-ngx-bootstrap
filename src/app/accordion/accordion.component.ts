@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  styles: []
 })
 export class AccordionComponent implements OnInit {
 
   headers: string[] = ['Header One', 'Header Two','Header Three'];
   contents: string[] = ['First content', 'Other content', 'Another content'];
   headerChanged: string = null;
-  isDisabled: boolean = false;
+  isDisabled = false;
 
   accordionGroup = [
     { header: 'Header 1', content: 'Content 1' },
@@ -19,18 +19,16 @@ export class AccordionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  onHeaderIsOpenChange (headerIndex: number) {
+  onHeaderIsOpenChange(headerIndex: number): void {
     this.headerChanged = `${headerIndex}º header was toggled!`;
   }
 
-  addGroupItem() : void {
+  addGroupItem(): void {
     this.accordionGroup.push ({
       header: `Header ${this.accordionGroup.length + 1}`,
       content: `Content ${this.accordionGroup.length + 1}`,
     });
   }
-
 }
