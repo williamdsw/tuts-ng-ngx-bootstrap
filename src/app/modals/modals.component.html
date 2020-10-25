@@ -1,135 +1,203 @@
+<article>
 
-<!-- template modal -->
-<div class="mt-5 mb-5">
-    <h2> Template Modal </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (modalTemplate);"> Create Template Modal </button>
+    <!-- template modal -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Template Modal </h2>
+            </header>
 
-    <ng-template #modalTemplate>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn btn-primary" (click)="openModal (modalTemplate);">
+                Create Template Modal
             </button>
-        </div>
-        <div class="modal-body">
-            This is a modal
-        </div>
-    </ng-template>
-</div>
 
-<!-- scrolling long content -->
-<div class="mt-5 mb-5">
-    <h2> Scrolling Long Content </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (longModalTemplate);"> Open Modal </button>
+            <ng-template #modalTemplate>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This is a modal
+                </div>
+            </ng-template>
+        </div>
+    </section>
 
-    <ng-template #longModalTemplate>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
+    <!-- scrolling long content -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Scrolling Long Content </h2>
+            </header>
+
+            <button type="button" class="btn btn-primary" (click)="openModal (longModalTemplate);"> Open Modal </button>
+
+            <ng-template #longModalTemplate>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
+
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p *ngFor="let item of items;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus enim esse excepturi,
+                        impedit,
+                        iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto ut?
+                    </p>
+                </div>
+            </ng-template>
+        </div>
+    </section>
+
+    <!-- confirm window -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Confirm Window </h2>
+            </header>
+
+            <button type="button" class="btn btn-primary" (click)="openModal (confirmModalTemplate);">
+                Open Modal
             </button>
+
+            <br><br>
+
+            <pre class="card card-block card-header" *ngIf="modalMessage"> {{ modalMessage }} </pre>
+
+            <ng-template #confirmModalTemplate>
+                <div class="modal-body text-center">
+                    <p> Do you want to confirm ? </p>
+                    <button type="button" class="btn btn-default" (click)="onConfirm ();"> Yes </button>
+                    <button type="button" class="btn btn-primary" (click)="onDecline ();"> No </button>
+                </div>
+            </ng-template>
         </div>
-        <div class="modal-body">
-            <p *ngFor="let item of items;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus enim esse excepturi, impedit,
-                iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto ut?
-            </p>
-        </div>
-    </ng-template>
-</div>
+    </section>
 
-<!-- confirm window -->
-<div class="mt-5 mb-5">
-    <h2> Confirm Window </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (confirmModalTemplate);"> Open Modal </button>
+    <!-- animated modal -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Animated Modal </h2>
+            </header>
 
-    <br><br>
-
-    <pre class="card card-block card-header" *ngIf="modalMessage"> {{ modalMessage }} </pre>
-
-    <ng-template #confirmModalTemplate>
-        <div class="modal-body text-center">
-            <p> Do you want to confirm ? </p>
-            <button type="button" class="btn btn-default" (click)="onConfirm ();"> Yes </button>
-            <button type="button" class="btn btn-primary" (click)="onDecline ();"> No </button>
-        </div>
-    </ng-template>
-</div>
-
-<!-- animated modal -->
-<div class="mt-5 mb-5">
-    <h2> Animated Modal </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (animatedModalTemplate, modalConfigFirst);"> Open Modal </button>
-
-    <ng-template #animatedModalTemplate>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn btn-primary"
+                (click)="openModal (animatedModalTemplate, modalConfigFirst);">
+                Open Modal
             </button>
-        </div>
-        <div class="modal-body">
-            Modal without animation...
-        </div>
-    </ng-template>
-</div>
 
-<!-- esq to quit -->
-<div class="mt-5 mb-5">
-    <h2> Press ESQ to Quit </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (esqModalTemplate, modalConfigSecond);"> Open Modal </button>
+            <ng-template #animatedModalTemplate>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
 
-    <ng-template #esqModalTemplate>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal without animation...
+                </div>
+            </ng-template>
+        </div>
+    </section>
+
+    <!-- esq to quit -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Press ESQ to Quit </h2>
+            </header>
+
+            <button type="button" class="btn btn-primary" (click)="openModal (esqModalTemplate, modalConfigSecond);">
+                Open Modal
             </button>
-        </div>
-        <div class="modal-body">
-            Press ESQ to Quit...
-        </div>
-    </ng-template>
-</div>
 
-<!-- modal with tooltip and popover -->
-<div class="mt-5 mb-5">
-    <h2> Modal with Tooltip and Popover </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (modalTooltipPopoverTemplate);"> Open Modal </button>
+            <ng-template #esqModalTemplate>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
 
-    <ng-template #modalTooltipPopoverTemplate>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Press ESQ to Quit...
+                </div>
+            </ng-template>
+        </div>
+    </section>
+
+    <!-- modal with tooltip and popover -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Modal with Tooltip and Popover </h2>
+            </header>
+
+            <button type="button" class="btn btn-primary" (click)="openModal (modalTooltipPopoverTemplate);">
+                Open Modal
             </button>
-        </div>
-        <div class="modal-body">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus enim esse excepturi, impedit,
-                iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto ut?
-            </p>
-            <button type="button" class="btn btn-primary" popover="Popover example"> Popover </button>
-            <button type="button" class="btn btn-primary" tooltip="Tooltip example"> Tooltip </button>
-        </div>
-    </ng-template>
-</div>
 
-<!-- change class -->
-<div class="mt-5 mb-5">
-    <h2> Change Class </h2>
-    <button type="button" class="btn btn-primary" (click)="openModal (modalChangeClass);"> Open Modal </button>
+            <ng-template #modalTooltipPopoverTemplate>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
 
-    <ng-template #modalChangeClass>
-        <div class="modal-header">
-            <h4 class="modal-title pull-left"> Modal </h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide ();">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus enim esse excepturi,
+                        impedit,
+                        iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto ut?
+                    </p>
+                    <button type="button" class="btn btn-primary" popover="Popover example"> Popover </button>
+                    <button type="button" class="btn btn-primary" tooltip="Tooltip example"> Tooltip </button>
+                </div>
+            </ng-template>
         </div>
-        <div class="modal-body">
-           Modal example...
+    </section>
+
+    <!-- change class -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Change Class </h2>
+            </header>
+
+            <button type="button" class="btn btn-primary" (click)="openModal (modalChangeClass);"> Open Modal </button>
+
+            <ng-template #modalChangeClass>
+                <div class="modal-header">
+                    <header>
+                        <h4 class="modal-title"> Modal </h4>
+                    </header>
+
+                    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide ();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal example...
+                </div>
+                <button type="button" class="btn btn-secondary" (click)="toggleModalClass ();"> Change Class Properties
+                </button>
+            </ng-template>
         </div>
-        <button type="button" class="btn btn-secondary" (click)="toggleModalClass ();"> Change Class Properties </button>
-    </ng-template>
-</div>
+    </section>
+</article>

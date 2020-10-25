@@ -3,29 +3,23 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-modals',
-  templateUrl: './modals.component.html',
-  styleUrls: ['./modals.component.css']
+  templateUrl: './modals.component.html'
 })
 export class ModalsComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public items: any[];
   public modalMessage: string;
-  public modalConfigFirst = {
-    animated: false
-  };
-  public modalConfigSecond = {
-    keyboard: true
-  };
+  public modalConfigFirst = { animated: false };
+  public modalConfigSecond = { keyboard: true };
 
-  private changeProperties: boolean = false;
+  private changeProperties = false;
 
   constructor(private modalService: BsModalService) {
     this.items = Array(15).fill(0);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   openModal(template: TemplateRef<any>, modalConfig?: any) {
     this.modalRef = this.modalService.show(template, modalConfig);
@@ -46,5 +40,4 @@ export class ModalsComponent implements OnInit {
     const widthClass = this.changeProperties ? 'modal-lg' : 'modal-sm';
     this.modalRef.setClass (widthClass);
   }
-
 }
