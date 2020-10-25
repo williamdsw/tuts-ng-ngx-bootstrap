@@ -4,8 +4,7 @@ import { listLocales } from 'ngx-bootstrap/chronos';
 
 @Component({
   selector: 'app-datepicker',
-  templateUrl: './datepicker.component.html',
-  styleUrls: ['./datepicker.component.css']
+  templateUrl: './datepicker.component.html'
 })
 export class DatepickerComponent implements OnInit {
 
@@ -24,18 +23,18 @@ export class DatepickerComponent implements OnInit {
   public themes: string[] = [
     'theme-default', 'theme-green', 'theme-blue', 'theme-dark-blue', 'theme-red', 'theme-orange'
   ];
-  public colorTheme: string = 'theme-green';
+  public colorTheme = 'theme-green';
   public bsConfigCustom: Partial<BsDatepickerConfig>;
 
-  public currentLocale: string = 'en';
+  public currentLocale = 'en';
   public locales = listLocales ();
 
   public minDate: Date = new Date();
   public otherMaxDate: Date = new Date();
 
   public daysDisabled: number[] = [
-    0, //SUNDAY
-    6, //SATURDAY
+    0, // SUNDAY
+    6, // SATURDAY
   ];
 
   public datesDisabled: Date[] = [
@@ -56,12 +55,11 @@ export class DatepickerComponent implements OnInit {
 
   // LIFE CYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // HELPER FUNCTIONS
 
-  applyTheme(datepicker: any) : void {
+  applyTheme(datepicker: any): void {
     this.bsConfigCustom = Object.assign ({}, { containerClass: this.colorTheme });
     setTimeout(() => {
       datepicker.show ();

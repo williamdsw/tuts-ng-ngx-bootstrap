@@ -5,6 +5,7 @@ import { defineLocale } from 'ngx-bootstrap/chronos';
 import { ptBrLocale } from 'ngx-bootstrap/locale';
 
 import { DatepickerRoutingModule } from './datepicker-routing.module';
+
 import { SharedModule } from '../shared/shared.module';
 
 import { DatepickerComponent } from './datepicker.component';
