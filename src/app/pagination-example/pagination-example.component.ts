@@ -3,8 +3,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 
 @Component({
   selector: 'app-pagination-example',
-  templateUrl: './pagination-example.component.html',
-  styleUrls: ['./pagination-example.component.css']
+  templateUrl: './pagination-example.component.html'
 })
 export class PaginationExampleComponent implements OnInit {
 
