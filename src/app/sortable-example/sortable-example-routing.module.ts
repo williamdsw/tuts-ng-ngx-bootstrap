@@ -5,7 +5,7 @@ import { SortableExampleComponent } from './sortable-example.component';
 
 const ROUTES: Routes = [
   { path: '', component: SortableExampleComponent },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(ROUTES)],

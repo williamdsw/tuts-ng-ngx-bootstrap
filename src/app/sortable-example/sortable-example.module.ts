@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { SortableExampleRoutingModule } from './sortable-example-routing.module';
-import { SharedModule } from "../shared/shared.module";
+
+import { SharedModule } from '../shared/shared.module';
 
 import { SortableExampleComponent } from './sortable-example.component';
 

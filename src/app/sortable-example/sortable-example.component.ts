@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sortable-example',
-  templateUrl: './sortable-example.component.html',
-  styleUrls: ['./sortable-example.component.css']
+  templateUrl: './sortable-example.component.html'
 })
 export class SortableExampleComponent implements OnInit {
 
@@ -36,7 +35,6 @@ export class SortableExampleComponent implements OnInit {
 
   // LIFECYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
