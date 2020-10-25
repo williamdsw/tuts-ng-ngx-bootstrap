@@ -1,10 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TabsetComponent } from "ngx-bootstrap";
+import { TabsetComponent } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-tabs-example',
-  templateUrl: './tabs-example.component.html',
-  styleUrls: ['./tabs-example.component.css']
+  templateUrl: './tabs-example.component.html'
 })
 export class TabsExampleComponent implements OnInit {
 
@@ -19,14 +18,27 @@ export class TabsExampleComponent implements OnInit {
     { title: 'Title 3', content: 'Content 3', customClass: 'blue-tab' },
   ];
 
+  public hardRockBands: string[] = [
+    'AC/DC', 'Thin Lizzy', `Guns 'n' Roses`, 'Bon Jovi', 'Kiss', 'Deep Purple', 'Poison',
+    'Warrant', 'Europe', 'Motlëy Crue'
+  ];
+
+  public heavyMetalBands: string[] = [
+    'Iron Maiden', 'Helloween', 'Black Sabbath', 'Dio', 'Ozzy Osbourne', 'Judas Priest',
+    'Sepultura', 'Megadeth', 'Metallica', 'Accept', 'Slayer', 'Dream Theater'
+  ];
+
+  public industrialBands: string[] = [
+    'Ministry', 'Nine Inch Nails', 'Static X', 'Marilyn Manson', 'White Zombie', 'Rob Zombie'
+  ];
+
   // CONSTRUCTOR
 
   constructor() { }
 
   // LIFECYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // HELPER FUNCTIONS
 

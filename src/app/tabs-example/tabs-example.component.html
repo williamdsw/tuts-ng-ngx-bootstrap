@@ -1,51 +1,143 @@
 
-<!-- basic -->
-<div class="mt-5 mb-5">
-    <h2> Basic Tabs </h2>
-    <div>
-        <tabset>
-            <tab heading="Hard Rock"> KISS </tab>
-            <tab heading="Heavy Metal"> Iron Maiden </tab>
-            <tab heading="Industrial"> Ministry </tab>
-        </tabset>
-    </div>
-</div>
+<article>
+    <div class="row my-5">
 
-<!-- disabled -->
-<div class="mt-5 mb-5">
-    <h2> Disable Tabs </h2>
-    <button type="button" class="btn btn-primary btn-sm" (click)="onToggleTabs ();">
-        Enable / Disable
-    </button>
-    <div class="mt-1">
-        <tabset #toggleTabs>
-            <tab heading="Hard Rock"> KISS </tab>
-            <tab heading="Heavy Metal"> Iron Maiden </tab>
-            <tab heading="Industrial"> Ministry </tab>
-        </tabset>
-    </div>
-</div>
+        <!-- basic -->
+        <div class="col-md-6">
+            <header>
+                <h2 class="text-center"> Basic Tabs </h2>
+            </header>
 
-<!-- justified -->
-<div class="mt-5 mb-5">
-    <h2> Justified Tabs </h2>
-    <div>
-        <tabset [justified]="true">
-            <tab heading="Hard Rock"> KISS </tab>
-            <tab heading="Heavy Metal"> Iron Maiden </tab>
-            <tab heading="Industrial"> Ministry </tab>
-        </tabset>
-    </div>
-</div>
+            <hr>
 
-<!-- dynamic -->
-<div class="mt-5 mb-5">
-    <h2> Dynamic Tabs </h2>
-    <div>
-        <tabset>
-            <tab *ngFor="let tab of tabs;" [heading]="tab.title" [customClass]="tab.customClass">
-                {{ tab.content }}
-            </tab>
-        </tabset>
+            <tabset>
+                <tab heading="Hard Rock" class="m-3"> 
+                    <div class="row p-1 bg-dark">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of hardRockBands">
+                            <p class="text-white bg-danger border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Heavy Metal" class="m-3"> 
+                    <div class="row p-1 bg-primary">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of heavyMetalBands">
+                            <p class="text-danger bg-warning border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Industrial" class="m-3"> 
+                    <div class="row p-1 bg-light">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of industrialBands">
+                            <p class="text-white bg-success border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+
+        <!-- disabled -->
+        <div class="col-md-6">
+            <header>
+                <h2 class="text-center"> Disable Tabs </h2>
+            </header>
+
+            <hr>
+
+            <button type="button" class="btn btn-primary btn-sm mb-1" (click)="onToggleTabs ();">
+                Enable / Disable
+            </button>
+            
+            <tabset #toggleTabs>
+                <tab heading="Hard Rock" class="m-3"> 
+                    <div class="row p-1 bg-dark">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of hardRockBands">
+                            <p class="text-white bg-danger border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Heavy Metal" class="m-3"> 
+                    <div class="row p-1 bg-primary">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of heavyMetalBands">
+                            <p class="text-danger bg-warning border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Industrial" class="m-3"> 
+                    <div class="row p-1 bg-light">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of industrialBands">
+                            <p class="text-white bg-success border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
     </div>
-</div>
+    <div class="row my-5">
+
+        <!-- justified -->
+        <div class="col-md-6">
+            <header>
+                <h2 class="text-center"> Justified Tabs </h2>
+            </header>
+
+            <hr>
+
+            <tabset [justified]="true">
+                <tab heading="Hard Rock" class="m-3"> 
+                    <div class="row p-1 bg-dark">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of hardRockBands">
+                            <p class="text-white bg-danger border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Heavy Metal" class="m-3"> 
+                    <div class="row p-1 bg-primary">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of heavyMetalBands">
+                            <p class="text-danger bg-warning border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+                <tab heading="Industrial" class="m-3"> 
+                    <div class="row p-1 bg-light">
+                        <div class="col-lg-4 col-sm-6" *ngFor="let band of industrialBands">
+                            <p class="text-white bg-success border text-center m-1"> 
+                                {{ band }} 
+                            </p>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+
+        <!-- dynamic -->
+        <div class="col-md-6">
+            <header>
+                <h2 class="text-center"> Dynamic Tabs </h2>
+            </header>
+
+            <hr>
+
+            <tabset>
+                <tab *ngFor="let tab of tabs;" [heading]="tab.title" [customClass]="tab.customClass">
+                    <p class="text-center p-3"> {{ tab.content }} </p>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</article>
