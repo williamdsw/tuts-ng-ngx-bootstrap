@@ -3,14 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-typeahead-example',
   templateUrl: './typeahead-example.component.html',
-  styleUrls: ['./typeahead-example.component.css']
 })
 export class TypeaheadExampleComponent implements OnInit {
 
+  public placeholder = 'Type a band...';
+
   public bands: string[] = [
-    "Black Sabbath", "KISS", "Soundgarden", "Alice In Chains", "Metallica", 
-    "AC/DC", "Tool", "The Beatles", "Ted Nugent", "Nine Inch Nails",
-    "Iron Maiden", "Megadeth", "Whitesnake"
+    'Black Sabbath', 'KISS', 'Soundgarden', 'Alice In Chains', 'Metallica',
+    'AC/DC', 'Tool', 'The Beatles', 'Ted Nugent', 'Nine Inch Nails',
+    'Iron Maiden', 'Megadeth', 'Whitesnake'
   ];
   public currentBand: string;
 
@@ -27,11 +28,11 @@ export class TypeaheadExampleComponent implements OnInit {
     { id: 10, name: 'The Clash', genre: 'Punk Rock' },
     { id: 11, name: 'Billy Idol', genre: 'Punk Rock' },
   ];
+
   public currentOtherBand: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

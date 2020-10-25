@@ -5,7 +5,7 @@ import { TypeaheadExampleComponent } from './typeahead-example.component';
 
 const ROUTES: Routes = [
   { path: '', component: TypeaheadExampleComponent },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(ROUTES)],
