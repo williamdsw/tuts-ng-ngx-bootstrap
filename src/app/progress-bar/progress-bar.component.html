@@ -1,51 +1,67 @@
+<article>
 
-<!-- static -->
-<div class="mt-5 mb-5">
-    <h2> Static Progress Bars </h2>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="mb-2">
-                <progressbar [value]="40"></progressbar>
+    <!-- static -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Static Progress Bars </h2>
+            </header>
+            
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar [value]="40"></progressbar>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar type="warning" [value]="13" [striped]="true"> 
+                            13% 
+                        </progressbar>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar type="danger" max="300" [value]="195" [striped]="true" [animate]="true"> 
+                            195 / 300
+                        </progressbar>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="mb-2">
-                <progressbar type="warning" [value]="13" [striped]="true"> 13% </progressbar>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="mb-2">
-                <progressbar type="danger" max="300" [value]="195" [striped]="true" [animate]="true"> 195 / 300 </progressbar>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
 
-<!-- dynamic -->
-<div class="mt-5 mb-5">
-    <h2> Dynamic Progress Bars </h2>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="mb-2">
-                <progressbar [max]="max" [value]="dynamicValue">
-                    <span class="text-nowrap"> {{ dynamicValue }} / {{ max }} </span>
-                </progressbar>
+    <!-- dynamic -->
+    <section>
+        <div class="my-5">
+            <header>
+                <h2> Dynamic Progress Bars </h2>
+            </header>
+            
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar [max]="max" [value]="dynamicValue">
+                            <span class="text-nowrap"> {{ dynamicValue }} / {{ max }} </span>
+                        </progressbar>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar type="success" [value]="dynamicValue" [animate]="false">
+                            <b> {{ dynamicValue }} % </b>
+                        </progressbar>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-2">
+                        <progressbar class="progress-striped active" [type]="type" [value]="dynamicValue">
+                            {{ type }}
+                        </progressbar>
+                    </div>
+                </div>
             </div>
+            <button type="button" class="btn btn-sm btn-primary" (click)="randomize ();"> Randomize </button>
         </div>
-        <div class="col-sm-12">
-            <div class="mb-2">
-                <progressbar type="success" [value]="dynamicValue" [animate]="false">
-                    <b> {{ dynamicValue }} % </b>
-                </progressbar>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="mb-2">
-                <progressbar class="progress-striped active" [type]="type" [value]="dynamicValue">
-                    {{ type }}
-                </progressbar>
-            </div>
-        </div>
-    </div>
-    <button type="button" class="btn btn-sm btn-primary" (click)="randomize ();"> Randomize </button>
-</div>
+    </section>
+</article>

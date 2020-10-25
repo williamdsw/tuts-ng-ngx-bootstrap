@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
-  templateUrl: './progress-bar.component.html',
-  styleUrls: ['./progress-bar.component.css']
+  templateUrl: './progress-bar.component.html'
 })
 export class ProgressBarComponent implements OnInit {
 
   // FIELDS
 
-  public max: number = 100;
-  public showWarning: boolean = false;
+  public max = 100;
+  public showWarning = false;
   public dynamicValue: number;
   public type: string;
 
@@ -22,13 +21,12 @@ export class ProgressBarComponent implements OnInit {
 
   // LIFECYCLE HOOKS
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // HELPER FUNCTIONS
 
   randomize(): void {
-    let value = Math.floor (Math.random () * 100 + 1);
+    const value = Math.floor (Math.random () * 100 + 1);
     let progressBarType: string;
 
     if (value < 25) {
